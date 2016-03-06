@@ -2,7 +2,7 @@ require_relative '../../SimplySite'
 
 module SimplySite
 
-	SS_EXPECTED_DIRS = %w(config content layouts)
+	SS_EXPECTED_DIRS = %w(assets layouts pages vars)
 
 	def self.directoryCheck(path)
 		puts 'Checking Directories...'

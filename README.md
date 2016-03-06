@@ -15,6 +15,33 @@ SimplySite is a no-nonsense static site builder, designed to make building sites
 
 		$ gem install SimplySite
 
+## Project Layout
+
+### /assets
+
+Use this directory to store all of your statically served files. Perfect for images, video, JavaScript, and helper CSS. It will be copied directly into your output folder. Be sure to point links here.
+
+
+
+### /layouts
+
+This directory is where all of you layouts live.
+
+### /pages
+
+This directory and its subdirectories contain all of the markup for individual pages. Its structure is the same as the resulting file tree in the output directory.
+
+### /vars
+
+This directory and its subdirectories contain additional properties to be used by templates and markup.
+
+The following items are possible:
+
+* /vars/properties.json --- Here you can store all of the properties to hand to every layout and page.
+* /vars/\[path\]/properties.json  --- A specific folder in */pages* can be provided with its own additional properties.
+	
+Properties are parsed from top to bottom, with values being overridden if specified in a deeper directory.
+
 ## Usage
 
 ### New
