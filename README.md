@@ -1,26 +1,49 @@
 # SimplySite
 
-TODO: Write a gem description
+> Because being a web-dev is hard enough
+
+SimplySite is a no-nonsense static site builder, designed to make building sites easier than ever.
+
+## Features
+
+* Automatic creation of a new project
+* Check for valid project without building
+* Build from any directory to another directory
+* Support of any markup language through the venerable Tilt Gem
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'SimplySite'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install SimplySite
+		$ gem install SimplySite
 
 ## Usage
 
-TODO: Write usage instructions here
+### New
+
+		$ simply-site create [path]
+		
+If *path* is not specified, SimplySite creates a new project in the current directory.
+		
+If *path* is specified, SimplySite creates a new project in that directory.
+		
+### Check
+		
+		$ simply-site check [path]
+		
+If *path* is not specified, SimplySite validates the project in the current directory.
+    		
+If *path* is specified, SimplySite validates the project in that directory.
+		
+### Build
+
+		$ simply-site build [src] <dest>
+		
+If *src* is not specified, SimplySite builds the project in the current directory, placing it in *dest*.
+    		
+If *path* is specified, SimplySite builds the project in that directory, placing it in *dest*.
+		
+### Help
+
+		$ simply-site help
 
 ## Contributing
 

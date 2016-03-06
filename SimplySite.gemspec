@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = SimplySite::VERSION
   spec.authors       = ['bmeyers@datadrake.com']
   spec.summary       = %q{Because being a web-dev is hard enough}
-  spec.description   = %q{SimplySite is a no-nonsense static sites builder, designed to make building sites easier than ever}
+  spec.description   = %q{SimplySite is a no-nonsense static site builder, designed to make building sites easier than ever}
   spec.homepage      = 'http://www.datadrake.com'
   spec.license       = 'MIT'
 
