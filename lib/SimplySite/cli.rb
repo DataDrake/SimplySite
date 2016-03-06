@@ -1,4 +1,5 @@
 require_relative '../SimplySite'
+require_relative '../SimplySite/cli/check'
 require 'commander'
 
 module SimplySite
