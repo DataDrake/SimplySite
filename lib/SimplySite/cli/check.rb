@@ -2,12 +2,12 @@ require_relative '../../SimplySite'
 
 module SimplySite
 
-	SS_EXPECTED_DIRS = %w(assets layouts pages vars)
+
 
 	def self.directoryCheck(path)
 		puts 'Checking Directories...'
 		ok = true
-		SS_EXPECTED_DIRS.each do |d|
+		SS_BASE_DIRS.each do |d|
 			unless Dir.entries(path).include? d
 				say_warning "Missing folder '#{d}'"
 				ok = false
