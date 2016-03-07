@@ -8,7 +8,12 @@ module SimplySite
 		Dir.chdir(path) do
 			SS_BASE_DIRS.each do |d|
 				unless Dir.exist? d
-					Dir.mkdir(d,0700)
+					begin
+						Dir.mkdir(d,0700)
+					rescue => e
+						say_error 'ERROR: could not create directory'
+						say_error "REASON: #{e.message}"
+					end
 				end
 			end
 		end
@@ -25,7 +30,14 @@ module SimplySite
 				exit(1)
 		end
 		unless Dir.exist?(path)
-			Dir.mkdir(path,0700)
+			begin
+				Dir.mkdir(path,0700)
+			rescue => e
+				say_error 'ERROR: could not create directory'
+				say_error "REASON: #{e.message}"
+				say_error 'FAIL: New Project Not Created'
+				exit(1)
+			end
 		end
 		exit(1) unless createDirs(path)
 

@@ -4,7 +4,7 @@ module SimplySite
 
 
 
-	def self.directoryCheck(path)
+	def self.checkDirs(path)
 		puts 'Checking Directories...'
 		ok = true
 		SS_BASE_DIRS.each do |d|
@@ -35,7 +35,7 @@ module SimplySite
 			say_error "ERROR: Path '#{path}' does not exist"
 			exit(1)
 		end
-		exit(1) unless directoryCheck(path)
+		exit(1) unless checkDirs(path)
 
 		say_ok 'DONE: All tests pass'
 	end
