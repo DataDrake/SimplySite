@@ -2,8 +2,6 @@ require_relative '../../SimplySite'
 
 module SimplySite
 
-
-
 	def self.checkDirs(path)
 		puts 'Checking Directories...'
 		ok = true
